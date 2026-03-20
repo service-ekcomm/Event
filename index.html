@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>益光資通：AI 驅動通訊革命實戰說明會</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --ek-red: #CC0000;
+            --ek-red-dark: #800000;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+        .hero-banner {
+            background: linear-gradient(135deg, var(--ek-red) 0%, var(--ek-red-dark) 100%);
+        }
+        .date-badge {
+            background: white;
+            box-shadow: 0 15px 30px -10px rgba(204, 0, 0, 0.2);
+            border-radius: 1.5rem;
+            border-bottom: 4px solid var(--ek-red);
+        }
+        .agenda-table {
+            border-collapse: separate;
+            border-spacing: 0 4px;
+            width: 100%;
+        }
+        .agenda-table tr td {
+            padding: 12px;
+            vertical-align: middle;
+        }
+        /* RWD 輔助設定 */
+        @media (max-width: 768px) {
+            .hero-banner { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .content-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .time-col { width: 100px; font-size: 0.8rem; }
+            .hero-banner h1 { font-size: 2.5rem; }
+            /* 手機版針對並列區塊的細微調整 */
+            .mobile-compact-padding { padding: 1.25rem !important; }
+            .mobile-date-text { font-size: 1.5rem !important; }
+            .mobile-time-text { font-size: 3rem !important; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 網頁主容器 -->
+    <div class="max-w-[1100px] mx-auto bg-white shadow-2xl min-h-screen flex flex-col">
+        
+        <!-- Header & Hero -->
+        <header class="hero-banner text-white pt-12 pb-24 px-8 md:px-16 text-left relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start mb-16 relative z-10">
+                <!-- 公司識別 -->
+                <div class="flex flex-col border-l-4 border-white pl-5 py-1">
+                    <div class="font-black text-3xl md:text-4xl tracking-tighter leading-none mb-1">益光資通</div>
+                    <div class="text-[12px] tracking-[0.45em] opacity-90 uppercase font-bold" style="font-family: 'Montserrat';">EK-COMM LTD</div>
+                </div>
+                
+                <div class="text-right mt-6 md:mt-0 hidden sm:block">
+                    <div class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-black uppercase tracking-widest mb-1">
+                        Official Event 2026
+                    </div>
+                    <p class="text-sm font-bold opacity-90">Mitel 那維亞 X Zoom 共同協辦</p>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-4 text-white text-left">
+                    <div class="h-[2px] w-12 bg-white/60"></div>
+                    <p class="text-sm font-bold uppercase tracking-[0.4em] opacity-80">Innovation & AI Synergy</p>
+                </div>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 tracking-tighter leading-tight text-left">
+                    AI 驅動通訊革命
+                </h1>
+                <p class="text-xl md:text-3xl font-light tracking-wide border-l-4 border-white/30 pl-8 max-w-3xl text-left">
+                    打造全方位 AI 辦公場景：<span class="font-bold text-white">Mitel x Zoom 實戰說明會</span>
+                </p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow px-6 md:px-16 -mt-12 relative z-20 pb-20">
+            
+            <!-- 摘要與日期：強制橫向並列 (flex-row) -->
+            <div class="flex flex-row gap-4 md:gap-8 mb-16 items-stretch">
+                <!-- 摘要內容 -->
+                <div class="flex-grow bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-5 md:p-10 border border-slate-100 text-left">
+                    <h3 class="text-lg md:text-xl font-black text-slate-800 mb-2 md:mb-4 flex items-center">
+                        <i data-lucide="help-circle" class="mr-2 md:mr-3 text-[#CC0000] w-5 h-5 md:w-7 md:h-7"></i> 
+                        <span class="leading-tight">客戶的 AI 需求，您準備好了嗎？</span>
+                    </h3>
+                    <p class="text-slate-500 italic mb-4 md:mb-6 leading-relaxed pl-4 md:pl-6 border-l-2 border-slate-100 text-sm md:text-lg">
+                        「通訊數位化優勢在哪？」 「AI 協作，您有解決方案嗎？」
+                    </p>
+                    <p class="font-bold text-slate-900 text-sm md:text-xl leading-snug">
+                        益光資通演示：<span class="text-[#CC0000]">手機即分機</span>，穩定備援極致解決方案。
+                    </p>
+                </div>
+                
+                <!-- 日期小卡：固定於右側 -->
+                <div class="date-badge flex-shrink-0 flex flex-col justify-center items-center text-center p-4 md:p-8 w-24 md:w-52">
+                    <span class="text-[8px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">April 2026</span>
+                    <div class="text-xl md:text-5xl font-black text-[#CC0000] leading-none mb-1 whitespace-nowrap mobile-date-text" style="font-family: 'Montserrat';">4月8日</div>
+                    <div class="h-[1px] w-6 md:w-10 bg-slate-100 my-1 md:my-3"></div>
+                    <span class="text-sm md:text-2xl font-black text-slate-700 underline decoration-[#CC0000] decoration-2 md:decoration-4 underline-offset-4 whitespace-nowrap">週三</span>
+                </div>
+            </div>
+
+            <!-- 活動議程 -->
+            <div class="px-2 mb-20 text-left">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-black tracking-tighter text-slate-800">活動議程 Agenda</h2>
+                    <div class="h-px bg-slate-200 flex-grow"></div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="agenda-table w-full">
+                        <tbody>
+                            <tr class="text-slate-400 text-left">
+                                <td class="whitespace-nowrap font-bold text-sm tracking-wider w-40">13:30 - 14:00</td>
+                                <td class="text-xl font-medium">嘉賓簽到與產品實機體驗</td>
+                                <td class="text-right text-xs opacity-60 whitespace-nowrap">益光團隊</td>
+                            </tr>
+                            <tr class="text-slate-400 text-left border-t border-slate-50">
+                                <td class="whitespace-nowrap font-bold text-sm tracking-wider">14:00 - 14:10</td>
+                                <td class="text-xl font-medium">開場致詞</td>
+                                <td class="text-right text-xs opacity-60 whitespace-nowrap">益光團隊</td>
+                            </tr>
+                            
+                            <tr class="bg-red-50/50 rounded-2xl text-left">
+                                <td class="whitespace-nowrap font-black text-red-600 text-sm tracking-wider">14:10 - 15:00</td>
+                                <td class="py-6">
+                                    <div class="text-2xl font-black text-[#CC0000] mb-1 text-left">Mitel 新世代通訊系統</div>
+                                    <div class="text-base font-medium text-red-700 opacity-70 text-left text-sm md:text-base">彈性部署 x 智慧整合 x 穩定備援</div>
+                                </td>
+                                <td class="text-right text-xl font-black text-red-700 whitespace-nowrap">Mitel 原廠</td>
+                            </tr>
+                            
+                            <tr class="text-slate-300 italic text-left border-t border-slate-50">
+                                <td class="whitespace-nowrap font-bold text-sm tracking-wider">15:00 - 15:30</td>
+                                <td class="text-xl font-medium text-left" colspan="2">精緻茶點與同業交流時間</td>
+                            </tr>
+                            
+                            <tr class="bg-red-50/50 rounded-2xl text-left">
+                                <td class="whitespace-nowrap font-black text-red-600 text-sm tracking-wider">15:30 - 16:10</td>
+                                <td class="text-2xl font-black text-[#CC0000] text-left">ZoomAI 雲端平台功能深度介紹</td>
+                                <td class="text-right text-xl font-black text-red-700 whitespace-nowrap">Zoom 原廠</td>
+                            </tr>
+                            
+                            <tr class="bg-red-50/50 rounded-2xl text-left">
+                                <td class="whitespace-nowrap font-black text-red-600 text-sm tracking-wider">16:10 - 16:40</td>
+                                <td class="text-2xl font-black text-[#CC0000] text-left">混合雲通訊整合方案分享</td>
+                                <td class="text-right text-xl font-black text-red-700 whitespace-nowrap">益光 Steven</td>
+                            </tr>
+                            
+                            <tr class="text-slate-400 text-left border-t border-slate-50">
+                                <td class="whitespace-nowrap font-bold text-sm tracking-wider">16:40 - 17:00</td>
+                                <td class="text-xl font-medium text-left">Q&A 現場諮詢與抽獎回饋</td>
+                                <td class="text-right text-xs opacity-60 whitespace-nowrap">益光團隊</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 地點區塊：強制橫向並列 (flex-row) -->
+            <div class="bg-slate-900 rounded-[2.5rem] p-6 md:p-10 text-white flex flex-row justify-between items-center shadow-2xl relative overflow-hidden mb-16">
+                <i data-lucide="map-pin" class="absolute -right-6 -bottom-6 w-32 md:w-48 h-32 md:h-48 opacity-5 text-white"></i>
+                
+                <div class="relative z-10 flex flex-row items-center gap-4 md:gap-8 flex-1">
+                    <div class="w-10 h-10 md:w-16 md:h-16 bg-[#CC0000] flex-shrink-0 rounded-xl flex items-center justify-center shadow-lg">
+                        <i data-lucide="navigation" class="text-white w-5 h-5 md:w-8 md:h-8"></i>
+                    </div>
+                    <div class="text-left">
+                        <a href="https://maps.app.goo.gl/f46yZjnMntHZXPNE8" target="_blank" class="text-base md:text-3xl font-black text-white hover:text-[#CC0000] transition-colors underline decoration-[#CC0000] underline-offset-4 md:underline-offset-8">台南大飯店 國際會議一廳</a>
+                        <p class="text-slate-400 mt-1 md:mt-2 text-[10px] md:text-lg font-medium tracking-wide">台南市中西區成功路 1 號</p>
+                    </div>
+                </div>
+
+                <!-- 右側時間區塊：固定位置 -->
+                <div class="flex flex-col items-end md:border-l-2 border-white/10 ml-4 md:pl-12 flex-shrink-0 relative z-10 text-white">
+                    <p class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] opacity-40 mb-1 text-white">Starting At</p>
+                    <p class="text-3xl md:text-7xl font-black text-[#CC0000] leading-none whitespace-nowrap mobile-time-text" style="font-family: 'Montserrat';">1:30</p>
+                </div>
+            </div>
+
+            <!-- 報名區塊 -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-48 pt-12 border-t border-slate-100">
+                <div class="text-center md:text-left max-w-md">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                        <div class="h-[1px] w-10 bg-[#CC0000]"></div>
+                        <p class="text-xs font-black text-[#CC0000] tracking-widest uppercase">Registration Open</p>
+                    </div>
+                    <h4 class="text-2xl md:text-3xl font-black text-slate-800 mb-6 leading-tight">現場備有精美禮品<br>期待您的蒞臨交流</h4>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZnFTa4dYRClKFPtqkbRZH2VKRweFa-NMnSn8N10O6qTxA-w/viewform" target="_blank" class="bg-[#CC0000] text-white px-10 py-5 rounded-2xl font-black text-xl inline-flex items-center shadow-[0_20px_40px_-10px_rgba(204,0,0,0.4)] hover:scale-105 transition-all no-underline">
+                        <i data-lucide="edit-3" class="mr-3 w-7 h-7 text-white"></i> 立即線上報名
+                    </a>
+                </div>
+                
+                <div class="flex-shrink-0 flex flex-col items-center bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                    <div class="w-36 h-36 p-3 rounded-2xl bg-white shadow-inner flex items-center justify-center mb-4">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://docs.google.com/forms/d/e/1FAIpQLSdZnFTa4dYRClKFPtqkbRZH2VKRweFa-NMnSn8N10O6qTxA-w/viewform" alt="報名 QR Code" class="w-full h-full mix-blend-multiply">
+                    </div>
+                    <p class="text-[10px] font-black text-slate-400 tracking-[0.5em] uppercase">掃碼快速報名</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-100 py-12 px-8 md:px-16 mt-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-bold text-slate-300 uppercase tracking-widest">
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400 font-bold">益光資通 EK-COMM LTD</span>
+                    <span class="hidden md:block w-px h-3 bg-slate-200"></span>
+                    <span class="text-slate-400 font-bold">Mitel 那維亞 & Zoom Official Partner</span>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://www.ek-comm.com" class="hover:text-[#CC0000] transition-colors font-bold">WWW.EK-COMM.COM</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
